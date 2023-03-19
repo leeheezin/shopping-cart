@@ -10,8 +10,9 @@ npm run dev
 ---
 
 ### 사용 스택
-* React
-* Vite
-* Node.js
-* Typescript
-* Bootstrap
+
+* `React`
+* `Vite`
+* `Node.js`
+* `Typescript`
+* `Bootstrap`
