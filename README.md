@@ -2,7 +2,6 @@
 
 ### 구동 방법
 ---
-
-`npm install
-
- npm run dev`
+`git clone https://github.com/leeheezin/shopping-cart.git`
+`npm install`
+ `npm run dev`
