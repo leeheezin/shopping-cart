@@ -1,32 +1,33 @@
 [
     {
         "id": 1,
-        "name": "Book",
-        "price": 13100,
-        "imgUrl": "/imgs/book.jpg"
+        "name": "에어 데스크",
+        "price": 131000,
+        "imgUrl": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/157242782195255523.jpg?gif=1&w=480&h=480&c=c&webp=1"
     },
     {
         "id": 2,
-        "name": "Computer",
+        "name": "삼성전자 DM500TFA-A58A 데스크탑 인텔 13세대 i5 사무용 컴퓨터",
         "price": 99990,
         "imgUrl": "/imgs/computer.jpg"
     },
     {
         "id": 3,
-        "name": "Banana",
-        "price": 4000,
-        "imgUrl": "/imgs/banana.jpg"
+        "name": "퓨리케어 360도 공기청정기 AS183DWFC 클린부스터",
+        "price": 656400
+,
+        "imgUrl": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/167834565345332349.jpg?gif=1&w=720&h=720&c=c&q=0.8&webp=1"
     },
     {
         "id": 4,
-        "name": "Car",
-        "price": 28000,
-        "imgUrl": "/imgs/car.jpg"
+        "name": "암막커튼 핀형/아일렛형/형상기억 33색상",
+        "price": 12000,
+        "imgUrl": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/165059626358949126.jpg?gif=1&w=480&h=480&c=c&webp=1"
     },
     {
         "id": 5,
-        "name": "Phone",
+        "name": "제트 무선청소기",
         "price": 39000,
-        "imgUrl": "/imgs/Phone.jpg"
+        "imgUrl": "https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/164497864137030916.jpg?gif=1&w=480&h=480&c=c&webp=1"
     }
 ]

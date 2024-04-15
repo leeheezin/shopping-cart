@@ -5,6 +5,9 @@ import { Store } from "./pages/Store"
 import { About } from "./pages/About"
 import { Navbar } from "./components/Navbar"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
+import { Checkout } from "./pages/Checkout"
+import { Fail } from "./pages/Fail"
+import { Success } from "./pages/Success"
 
 function App() {
   return(
@@ -15,6 +18,9 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/store" element={<Store/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
+        <Route path="/fail" element={<Fail/>}/>
+        <Route path="/success" element={<Success/>}/>
       </Routes>
     </Container>
     </ShoppingCartProvider>

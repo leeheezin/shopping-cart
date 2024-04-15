@@ -13,6 +13,8 @@ type CartItem = {
 type ShoppingCartContext = {
     openCart: () => void
     closeCart: () => void
+    closeBtn: () => void
+    removeAllCart: () => void
     getItemQuantity: (id:number) => number
     increaseCartQuantity: (id:number) => void
     decreaseCartQuantity: (id:number) => void
@@ -31,15 +33,17 @@ export function useShoppingCart() {
 export function ShoppingCartProvider ({children}:
     ShoppingCartProviderProps) {
         const [isOpen, setIsOpen] = useState(false)
+        const [removeBtn, setRemoveBtn] = useState(false)
         const [cartItems, setCartItems] = useLocalStorage<CartItem[]
         >("shopping-cart", [])
         
         const cartQuantity = cartItems.reduce(
-            (quantity, item) => item.quantity + quantity, 0
+            (quantity, item) => quantity + item.quantity, 0
         )
         
         const openCart = () => setIsOpen(true)
         const closeCart = () => setIsOpen(false)
+        const closeBtn = () => setRemoveBtn(false)
         function getItemQuantity(id:number) {
             return cartItems.find(item => item.id === id)?.quantity || 0
         }
@@ -78,6 +82,9 @@ export function ShoppingCartProvider ({children}:
                 return currItems.filter(item => item.id !== id)
             })
         }
+        function removeAllCart() {
+            setCartItems([])
+        }
         return (
             <ShoppingCartContext.Provider 
                 value = {{ 
@@ -85,13 +92,15 @@ export function ShoppingCartProvider ({children}:
                     increaseCartQuantity,
                     decreaseCartQuantity,
                     removeFromCart,
+                    removeAllCart,
                     openCart,
                     closeCart,
+                    closeBtn,
                     cartItems,
                     cartQuantity,
                     }}>
                 {children}
-                <ShoppingCart isOpen={isOpen}/>
+                <ShoppingCart isOpen={isOpen} removeBtn={removeBtn}/>
             </ShoppingCartContext.Provider>
         )
 }
